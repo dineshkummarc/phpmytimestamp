@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery timeago Example</title>
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<!-- timeago JS -->
+<script src="js/jquery.timeago.js"></script>
+	<!-- Demo CSS -->
+	<link rel="stylesheet" href="css/demo.css">
+</head>
+ <body>
+	<header class="intro">
+	<h1> jQuery timeago Example </h1>
+	<p>  jQuery plugin that makes it easy to support automatically updating fuzzy timestamps (e.g. "5 minutes ago").</p>
+	<p> Written in HTML, CSS, JavaScript (jQuery)... </p>
+	<div class="action">
+	<a href="https://www.codehim.com/date-time/convert-timestamp-to-time-ago/" title="Back to download and tutorial page" class="btn back">Back to Tutorial</a>
+	<a href="https://github.com/rmm5t/jquery-timeago" title="View, Fork or Star on GitHub" class="btn github">View on GitHub</a>
+	</div>
+	</header>
+<main>
+ <article>
+	<p>The following is the example of jQuery timeago plugin. </p>
+     <ul>
+     
+       <li>   <p class="example">
+                You opened this page <time class="loaded timeago" id="prog_date">when you opened the page</time>. <span class="help">(This will update every minute. Wait for it.)</span>
+           </p></li>
+        
+       <li>    <p class="example">
+        Ryan was born <time class="timeago" datetime="1978-12-18T17:17:00Z">Dec 18, 1978</time>.
+           </p></li>
+     
+         <li>  <p>This page created <time class="timeago" datetime="2019-11-27T09:24:17Z">November 27, 2019</time></p></li>
+    </ul>     
+         
+         </article>
+</main>
+
+<footer class="credit">Author: Ryan McGeary - Distributed By: <a title="Awesome web design code & scripts" href="https://www.codehim.com?source=demo-page" target="_blank">CodeHim</a></footer>
+
+<script>
+$(document).ready(function(){
+        $(".timeago").timeago();
+        $("#prog_date").text($.timeago(new Date()));
+               
+});
+</script>
+
+ </body>
+</html>
